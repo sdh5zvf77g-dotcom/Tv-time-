@@ -1,11 +1,5 @@
 {
   "sources": [
-    { "name": "English (all countries)", "url": "https://iptv-org.github.io/iptv/languages/eng.m3u" },
-    { "name": "United States", "url": "https://iptv-org.github.io/iptv/countries/us.m3u" },
-    { "name": "United Kingdom", "url": "https://iptv-org.github.io/iptv/countries/uk.m3u" },
-    { "name": "Canada", "url": "https://iptv-org.github.io/iptv/countries/ca.m3u" },
-    { "name": "Australia", "url": "https://iptv-org.github.io/iptv/countries/au.m3u" },
-    { "name": "Ireland", "url": "https://iptv-org.github.io/iptv/countries/ie.m3u" },
-    { "name": "New Zealand", "url": "https://iptv-org.github.io/iptv/countries/nz.m3u" }
+    { "name": "Worldwide, grouped by country", "url": "https://iptv-org.github.io/iptv/index.country.m3u" }
   ]
 }

@@ -39,7 +39,7 @@ function render(){
   list.innerHTML="";
   if(!rows.length){list.innerHTML='<div class="empty">No channels match. Try another search or category.</div>';return}
   const frag=document.createDocumentFragment();
-  rows.slice(0,500).forEach(c=>{
+  rows.slice(0,1000).forEach(c=>{
     const li=document.createElement("li");
     if(cur&&cur.url===c.url)li.setAttribute("aria-current","true");
     const img=document.createElement("img");img.alt="";img.loading="lazy";img.referrerPolicy="no-referrer";
