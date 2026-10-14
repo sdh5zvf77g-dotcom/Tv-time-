@@ -1,0 +1,5 @@
+{
+  "sources": [
+    { "name": "Worldwide, grouped by country", "url": "https://iptv-org.github.io/iptv/index.country.m3u" }
+  ]
+}

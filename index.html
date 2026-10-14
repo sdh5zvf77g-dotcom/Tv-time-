@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#10161d">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Free TV">
+<link rel="stylesheet" href="style.css">
+<title>Free TV</title>
+</head>
+<body>
+<header><h1>Free TV</h1><div id="now">Pick a channel</div></header>
+<main>
+  <div class="stage">
+    <video id="v" controls autoplay playsinline webkit-playsinline x-webkit-airplay="allow"></video>
+    <div id="msg">Loading channels…</div>
+  </div>
+  <div class="side">
+    <div class="tools">
+      <input id="q" type="search" placeholder="Search channels" aria-label="Search channels">
+      <select id="cat" aria-label="Category"></select>
+    </div>
+    <ul id="list"></ul>
+  </div>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.5.13/hls.min.js"></script>
+<script src="app.js"></script>
+<script>if("serviceWorker" in navigator)addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}))</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+:root{--bg:#10161d;--panel:#18212b;--line:#2a3644;--text:#e8edf2;--dim:#8a99a8;--accent:#ffb020;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;height:100dvh}
+body{overscroll-behavior:none}
+li,button{-webkit-tap-highlight-color:transparent}
+.more{display:block;width:calc(100% - 16px);margin:10px 8px;padding:12px;background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:8px;font:inherit}
+body{background:var(--bg);color:var(--text);font:16px/1.4 "Avenir Next",Avenir,"Trebuchet MS",sans-serif;display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+header{display:flex;align-items:center;gap:12px;padding:10px 14px}
+h1{font-size:20px;margin:0;font-weight:800;letter-spacing:.5px}
+#now{color:var(--dim);font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;text-align:right}
+main{flex:1;min-height:0;display:flex;flex-direction:column}
+.stage{background:#000;position:relative;aspect-ratio:16/9;width:100%}
+video{width:100%;height:100%;background:#000}
+#msg{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;color:var(--dim);pointer-events:none}
+.side{flex:1;min-height:0;display:flex;flex-direction:column}
+.tools{padding:10px 14px;display:grid;gap:8px;grid-template-columns:1fr auto}
+input,select{background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:10px 12px;font:inherit;min-width:0}
+input:focus-visible,select:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+#list{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;list-style:none;margin:0;padding:0 8px 12px}
+li{display:flex;align-items:center;gap:10px;padding:10px 8px;border-bottom:1px solid var(--line);cursor:pointer;border-radius:8px}
+li[aria-current=true]{background:var(--panel);box-shadow:inset 3px 0 var(--accent)}
+li img{width:44px;height:30px;object-fit:contain;background:#fff1;border-radius:4px;flex:none}
+li .n{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+li small{color:var(--dim);display:block;font-size:12px}
+.fav{background:none;border:0;color:var(--dim);font-size:22px;padding:4px 8px;cursor:pointer}
+.fav.on{color:var(--accent)}
+.empty{padding:24px 14px;color:var(--dim)}
+@media(min-width:860px){main{flex-direction:row}.stage{flex:1;aspect-ratio:auto;height:auto}.side{flex:none;width:380px;border-left:1px solid var(--line)}}
